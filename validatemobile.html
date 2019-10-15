@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VALIDATE_mobile</title>
+</head>
+<body>
+<div>
+    <div>
+        nhap sdt: <input type="text" id="inp" />
+        <button type="button" onclick="check()">submit</button>
+    </div>
+</div>
+<script>
+    function check() {
+        var inp = document.getElementById('inp').value;
+        result(inp);
+    }
+    function result(str) {
+        let regex = /^\(\d{2}\)\-\(0\d{9}\)$/;
+        if(regex.test(str)){
+            alert("so dien thoai hop le.");
+        }else{
+            alert("so dien thoai khong hop le");
+        }
+    }
+</script>
+</body>
+</html>
